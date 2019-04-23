@@ -5,12 +5,9 @@ import model.Galerie;
 import model.GalerieException;
 import model.Skulptur;
 
-public class TestSave
-{
-	public static void main(String[] args)
-	{
-		try
-		{
+public class TestSave {
+	public static void main(String[] args) {
+		try {
 			Galerie g = new Galerie("NewArts");
 			Skulptur p1, p2, p3, p4, p5, p6;
 			Bild b1, b2, b3, b4, b5, b6;
@@ -23,7 +20,7 @@ public class TestSave
             b6 = new Bild("Schiele", "Frau",  80, 90, 100000., true);
             p1 = new Skulptur("Bruno Gironcoli","Weltuhr",500,700,1000000.,350,"Stahl u. Messing");
             p2 = new Skulptur("Laura Browne","Your Face in my Hand",10,30,1000.,10,"Ton");
-                p2.setSehrSelten(true);
+            p2.setSehrSelten(true);
             p3 = new Skulptur("Auguste Rodin","Wasserspiel",5000,5000,100000.,2000,"Eisen u. Stahl");
             p4 = new Skulptur("Auguste Rodin","Bürger von Calais",500,100,170000.,250,"Bronze");
             p5 = new Skulptur("Michelangelo","David",100,100,1000000.,350,"Marmor");
@@ -46,8 +43,7 @@ public class TestSave
 			g.saveKunstwerke("C:\\scratch\\FX-Kkunstwerke.ser");
 			System.out.println(".........gesaved  nach  C:\\scratch\\FX-Kkunstwerke.ser..........");
 		}
-		catch (GalerieException ge)
-		{
+		catch (GalerieException ge) {
 			System.out.println(ge.getMessage());
 		}
 	}
